@@ -14,7 +14,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
   final List<Map<String, dynamic>> _navItems = [
     {"icon": 'assets/icons/home_regular_icon.webp', "label": "Home"},
-    {"icon": 'assets/icons/calendar_ltr_regular_icon.webp', "label": "Schedule"},
+    {"icon": 'assets/icons/calendar_ltr_regular_icon.webp', "label": "Attendance"},
     {"icon": 'assets/icons/person_regular_icon.webp', "label": "Profile"},
   ];
 
@@ -32,7 +32,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           BoxShadow(
             color: Colors.black26,
             blurRadius: 10,
-            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -63,13 +62,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                   Image.asset(
                     item["icon"],
                     color: Colors.white,
-                    width: 20.0,
-                    height: 20.0,
+                    width: width * 0.07,
+                    height: width * 0.07,
                     fit: BoxFit.contain,
                   ),
                   if (isSelected)
                     Padding(
-                      padding: const EdgeInsets.only(left: 8),
+                      padding: const EdgeInsets.only(left: 2),
                       child: Text(
                         item["label"],
                         style: TextStyle(color: Colors.white, fontSize: width * 0.04),
