@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smart_school/screens/navigations/attendance_screen.dart';
+import 'package:smart_school/screens/navigations/calendar_screen.dart';
 import 'package:smart_school/screens/navigations/home_screen.dart';
 import 'package:smart_school/screens/navigations/profile_screen.dart';
 import 'package:smart_school/utilities/cust_colors.dart';
@@ -14,8 +14,8 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
-  List<Widget> _screen = [HomeScreen(),AttendanceScreen(),ProfileScreen()];
-  List<String> _titles = ['SMART SCHOOL','ATTENDANCE','PROFILE'];
+  List<Widget> _screen = [HomeScreen(),CalendarScreen(),ProfileScreen()];
+  List<String> _titles = ['SMART SCHOOL','CALENDAR','PROFILE'];
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _DashboardState extends State<Dashboard> {
             builder:(context,constraints) => SingleChildScrollView(
               physics: AlwaysScrollableScrollPhysics(),
               child: Padding(
-                padding: EdgeInsets.fromLTRB(0,0, 0, screenHeight * 0.11,),
+                padding: EdgeInsets.fromLTRB(0,0, 0, screenWidth * 0.25,),
                 child: _screen[_selectedIndex],
               ),
             ),

@@ -14,7 +14,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
   final List<Map<String, dynamic>> _navItems = [
     {"icon": 'assets/icons/home_regular_icon.webp', "label": "Home"},
-    {"icon": 'assets/icons/calendar_ltr_regular_icon.webp', "label": "Attendance"},
+    {"icon": 'assets/icons/calendar_ltr_regular_icon.webp', "label": "CALENDAR"},
     {"icon": 'assets/icons/person_regular_icon.webp', "label": "Profile"},
   ];
 
